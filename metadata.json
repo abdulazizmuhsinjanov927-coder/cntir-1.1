@@ -1,0 +1,6 @@
+{
+  "name": "Ultimate Strike: Online",
+  "description": "Realistic 3D tactical multiplayer first-person shooter featuring 15 unique maps, weapon customization, real-time online matches, and dynamic combat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

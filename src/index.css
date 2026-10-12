@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Chakra Petch', sans-serif;
+    --font-tactical: 'Rajdhani', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-tactical);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Tactical HUD and Reticle Effects */
+@keyframes muzzleFlashAnim {
+  0% { opacity: 1; transform: scale(1.2) rotate(0deg); }
+  100% { opacity: 0; transform: scale(0.6) rotate(35deg); }
+}
+
+@keyframes hitmarkerPop {
+  0% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(1.0); opacity: 0; }
+}
+
+@keyframes damageFlash {
+  0% { opacity: 0.7; }
+  100% { opacity: 0; }
+}
+
+@keyframes killstreakPulse {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.05); filter: brightness(1.3); }
+}
+
+.animate-muzzle {
+  animation: muzzleFlashAnim 0.06s ease-out forwards;
+}
+
+.animate-hitmarker {
+  animation: hitmarkerPop 0.22s ease-out forwards;
+}
+
+.animate-damage {
+  animation: damageFlash 0.35s ease-out forwards;
+}
+
+.scanline {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 6px 100%;
+}
